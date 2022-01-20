@@ -14,13 +14,16 @@ public struct TypeCastingError {
     
     private let column: Int
     
+    public let message: String?
+    
     public init(
         fileID: String = #fileID,
         filePath: String = #filePath,
         file: String = #file,
         function: String = #function,
         line: Int = #line,
-        column: Int = #column
+        column: Int = #column,
+        message: String? = nil
     ) {
         self.fileID = fileID
         self.filePath = filePath
@@ -28,6 +31,7 @@ public struct TypeCastingError {
         self.function = function
         self.line = line
         self.column = column
+        self.message = message
     }
 }
 
@@ -39,12 +43,23 @@ extension TypeCastingError: Codable {}
 
 extension TypeCastingError: CustomStringConvertible {
     public var description: String {
-        String.localizedStringWithFormat(
-            NSLocalizedString("%@ [%d:%d] - %@ TypeCastingError", comment: ""),
-            self.fileID,
-            self.line,
-            self.column,
-            self.function
-        )
+        if let message = self.message {
+            return String.localizedStringWithFormat(
+                NSLocalizedString("%@ [%d:%d] - %@ TypeCastingError - %@", bundle: .module, comment: ""),
+                self.fileID,
+                self.line,
+                self.column,
+                self.function,
+                message
+            )
+        } else {
+            return String.localizedStringWithFormat(
+                NSLocalizedString("%@ [%d:%d] - %@ TypeCastingError", bundle: .module, comment: ""),
+                self.fileID,
+                self.line,
+                self.column,
+                self.function
+            )
+        }
     }
 }
