@@ -1,6 +1,6 @@
 # ErrorKit
 
-일반적으로 사용 할 수 있는 전역 오류 타입 패키지.
+범용 오류 타입 모음.
 
 ## Requirements
 
@@ -12,7 +12,7 @@
 ### Swift Package Manager
 
 ```swift
-.package(url: "https://github.com/jaemyeong/ErrorKit.git", .upToNextMajor(from: "0.1.2"))
+.package(url: "https://github.com/jaemyeong/ErrorKit.git", .upToNextMajor(from: "0.1.3"))
 ```
 
 ## Usage
