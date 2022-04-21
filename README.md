@@ -13,7 +13,7 @@
 ### Swift Package Manager
 
 ```swift
-.package(url: "https://github.com/jaemyeong/ErrorKit.git", .upToNextMajor(from: "0.1.4"))
+.package(url: "https://github.com/jaemyeong/ErrorKit.git", .upToNextMajor(from: "0.1.5"))
 ```
 
 ## Usage
