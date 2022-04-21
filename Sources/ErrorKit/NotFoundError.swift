@@ -37,6 +37,8 @@ public struct NotFoundError {
 
 extension NotFoundError: Error {}
 
+extension NotFoundError: Equatable {}
+
 extension NotFoundError: Hashable {}
 
 extension NotFoundError: Codable {}

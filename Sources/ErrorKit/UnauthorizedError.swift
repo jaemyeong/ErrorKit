@@ -37,6 +37,8 @@ public struct UnauthorizedError {
 
 extension UnauthorizedError: Error {}
 
+extension UnauthorizedError: Equatable {}
+
 extension UnauthorizedError: Hashable {}
 
 extension UnauthorizedError: Codable {}

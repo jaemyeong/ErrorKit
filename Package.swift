@@ -1,4 +1,4 @@
-// swift-tools-version:5.5
+// swift-tools-version:5.6
 
 import PackageDescription
 
@@ -10,16 +10,9 @@ let package = Package(
         .iOS(.v13)
     ],
     products: [
-        .library(
-            name: "ErrorKit",
-            targets: [
-                "ErrorKit"
-            ]
-        )
+        .library(name: "ErrorKit", targets: ["ErrorKit"])
     ],
     targets: [
-        .target(
-            name: "ErrorKit"
-        )
+        .target(name: "ErrorKit")
     ]
 )

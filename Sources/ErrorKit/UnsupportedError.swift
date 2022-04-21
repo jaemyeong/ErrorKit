@@ -1,7 +1,7 @@
 import Foundation
 
 @frozen
-public struct NilError {
+public struct UnsupportedError {
     private let fileID: String
     
     private let filePath: String
@@ -35,19 +35,19 @@ public struct NilError {
     }
 }
 
-extension NilError: Error {}
+extension UnsupportedError: Error {}
 
-extension NilError: Equatable {}
+extension UnsupportedError: Equatable {}
 
-extension NilError: Hashable {}
+extension UnsupportedError: Hashable {}
 
-extension NilError: Codable {}
+extension UnsupportedError: Codable {}
 
-extension NilError: CustomStringConvertible {
+extension UnsupportedError: CustomStringConvertible {
     public var description: String {
         if let message = self.message {
             return String.localizedStringWithFormat(
-                NSLocalizedString("%@ [%d:%d] - %@ NilError - %@", bundle: .module, comment: ""),
+                NSLocalizedString("%@ [%d:%d] - %@ UnsupportedError - %@", bundle: .module, comment: ""),
                 self.fileID,
                 self.line,
                 self.column,
@@ -56,7 +56,7 @@ extension NilError: CustomStringConvertible {
             )
         } else {
             return String.localizedStringWithFormat(
-                NSLocalizedString("%@ [%d:%d] - %@ NilError", bundle: .module, comment: ""),
+                NSLocalizedString("%@ [%d:%d] - %@ UnsupportedError", bundle: .module, comment: ""),
                 self.fileID,
                 self.line,
                 self.column,
