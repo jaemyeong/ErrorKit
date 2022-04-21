@@ -37,6 +37,8 @@ public struct NilError {
 
 extension NilError: Error {}
 
+extension NilError: Equatable {}
+
 extension NilError: Hashable {}
 
 extension NilError: Codable {}

@@ -37,6 +37,8 @@ public struct TypeCastingError {
 
 extension TypeCastingError: Error {}
 
+extension TypeCastingError: Equatable {}
+
 extension TypeCastingError: Hashable {}
 
 extension TypeCastingError: Codable {}

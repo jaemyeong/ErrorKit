@@ -37,6 +37,8 @@ public struct InstantiateError {
 
 extension InstantiateError: Error {}
 
+extension InstantiateError: Equatable {}
+
 extension InstantiateError: Hashable {}
 
 extension InstantiateError: Codable {}
