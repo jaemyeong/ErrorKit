@@ -37,6 +37,8 @@ public struct UnknownError {
 
 extension UnknownError: Error {}
 
+extension UnknownError: Equatable {}
+
 extension UnknownError: Hashable {}
 
 extension UnknownError: Codable {}
