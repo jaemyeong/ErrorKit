@@ -4,15 +4,16 @@
 
 ## Requirements
 
-- Xcode 13.2.1
-- Swift 5.5
+- macOS 12.3.1
+- Xcode 13.3.1
+- Swift 5.6
 
 ## Installation
 
 ### Swift Package Manager
 
 ```swift
-.package(url: "https://github.com/jaemyeong/ErrorKit.git", .upToNextMajor(from: "0.1.3"))
+.package(url: "https://github.com/jaemyeong/ErrorKit.git", .upToNextMajor(from: "0.1.4"))
 ```
 
 ## Usage
