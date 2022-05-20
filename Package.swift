@@ -7,12 +7,20 @@ let package = Package(
     defaultLocalization: "ko",
     platforms: [
         .macOS(.v10_15),
-        .iOS(.v13)
+        .iOS(.v13),
+        .macCatalyst(.v13)
     ],
     products: [
-        .library(name: "ErrorKit", targets: ["ErrorKit"])
+        .library(
+            name: "ErrorKit",
+            targets: [
+                "ErrorKit"
+            ]
+        )
     ],
     targets: [
-        .target(name: "ErrorKit")
+        .target(
+            name: "ErrorKit"
+        )
     ]
 )
